@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        header {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .profesor {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .contenido-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .titulo-porsche {
+            font-weight: bold;
+            background-color: aqua;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+        }
+        #logo {
+            width: 200px;
+            cursor: pointer;
+        }
+        iframe {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .container img {
+            width: 300px;
+            height: auto;
+        }
+        footer {
+            margin-top: 20px;
+            font-weight: bold;
+            background-color: aqua;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Programación Web I PRIM25
+    </header>
+    <p class="profesor">Profesora: Imelda Dayanira Hernández Martínez</p>
+    <p>Alumno: Gino Arez Navarro Avila</p>
+    <p> Evaluacion practica parcial 1</p>
+
+    <div class="contenido-container">
+        <div class="titulo-porsche">Conoce Porsche</div>
+        <img id="logo" src="Logoporsche.jpg" alt="Logo Porsche" onclick="cargarPagina()">
+        <iframe id="contenido"></iframe>
+    </div>
+
+    <div class="container">
+        <div>
+            <img src="Porschepanamera.jpg" alt="Porsche Panamera">
+        </div>
+        <div>
+            <img src="Porsche3.jpg" alt="Porsche 911">
+        </div>
+        <div>
+            <img src="Porsche1.jpg" alt="Porsche Cayman">
+        </div>
+    </div>
+
+    <footer>
+        Universidad Politécnica de San Luis Potosí
+    </footer>
+
+    <script>
+        function cargarPagina() {
+            document.getElementById("contenido").src = "https://www.porsche.com/";
+        }
+    </script>
+
+</body>
+</html>
