@@ -1,0 +1,89 @@
+/* Barra lateral */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    background-color: #32CD32; /* Fondo verde brillante */
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    box-shadow: 3px 0 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+li {
+    margin: 10px 0;
+    display: block;
+}
+
+/* Enlaces de la barra lateral */
+li a {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "NTR", sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease, padding-left 0.2s ease;
+}
+
+/* Efecto hover para los enlaces */
+li a:hover {
+    background-color: #218838;
+    padding-left: 20px;
+}
+
+/* Enlace activo */
+li .activo {
+    background-color: #006400;
+    color: white;
+}
+
+/* Estilo del contenido */
+section {
+    margin-left: 270px;
+    padding: 20px;
+    font-family: "NTR", sans-serif;
+    line-height: 1.6;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer address {
+    font-style: normal;
+    margin-top: 5px;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-weight: 600;
+}
