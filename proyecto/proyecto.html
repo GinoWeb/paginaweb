@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Charging Stations</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function mostrarHojaBlanca(event) {
+            event.preventDefault();
+            document.body.style.overflow = 'hidden';
+            let contenedor = document.createElement('div');
+            contenedor.style.position = 'fixed';
+            contenedor.style.top = '0';
+            contenedor.style.left = '100%';
+            contenedor.style.width = '100vw';
+            contenedor.style.height = '100vh';
+            contenedor.style.background = 'white';
+            contenedor.style.display = 'flex';
+            contenedor.style.justifyContent = 'center';
+            contenedor.style.alignItems = 'center';
+            contenedor.style.transition = 'left 0.5s ease-in-out';
+            document.body.appendChild(contenedor);
+            setTimeout(() => {
+                contenedor.style.left = '0';
+            }, 100);
+
+            let menu = document.createElement('div');
+            menu.style.display = 'grid';
+            menu.style.gridTemplateColumns = '1fr 1fr';
+            menu.style.gap = '20px';
+            menu.style.textAlign = 'center';
+
+            let opciones = [
+                { text: 'Productos', url: 'https://shop.tesla.com/' },
+                { text: 'Compras', url: 'https://www.tesla.com/support/ordering' },
+                { text: 'Iniciar sesión', url: 'https://www.tesla.com/teslaaccount' },
+                { text: 'Contacto ejecutivo', url: 'https://www.tesla.com/contact' }
+            ];
+
+            opciones.forEach(opcion => {
+                let boton = document.createElement('a');
+                boton.href = opcion.url;
+                boton.textContent = opcion.text;
+                boton.style.display = 'block';
+                boton.style.padding = '15px';
+                boton.style.background = 'black';
+                boton.style.color = 'white';
+                boton.style.borderRadius = '10px';
+                boton.style.textDecoration = 'none';
+                boton.style.fontSize = '18px';
+                boton.style.transition = 'background 0.3s';
+                boton.onmouseover = () => boton.style.background = 'red';
+                boton.onmouseout = () => boton.style.background = 'black';
+                menu.appendChild(boton);
+            });
+
+            contenedor.appendChild(menu);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Tesla Charging Stations</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="mostrarHojaBlanca(event)">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Carga tu Tesla en casa con la mejor tecnología</h2>
+        <p>Elige tu estación de carga ideal y recibe en la puerta de tu casa.</p>
+        <a href="#" class="btn">Ver productos</a>
+    </section>
+
+    <section class="formulario">
+        <h2>Personaliza tu pedido</h2>
+        <form>
+            <label for="tipo_negocio">Tipo de negocio:</label>
+            <select id="tipo_negocio">
+                <option>Residencial</option>
+                <option>Comercial</option>
+            </select>
+
+            <label for="tipo_cargador">Tipo de cargador:</label>
+            <select id="tipo_cargador">
+                <option>Wall Connector</option>
+                <option>Supercharger</option>
+            </select>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Tu nombre">
+
+            <label for="pais">País:</label>
+            <input type="text" id="pais" placeholder="País">
+
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" placeholder="Estado">
+
+            <label for="direccion">Dirección de entrega:</label>
+            <input type="text" id="direccion" placeholder="Dirección completa">
+
+            <button type="submit">Realizar pedido</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tesla Charging Stations. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
