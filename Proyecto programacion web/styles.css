@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f8f8;
+    color: #333;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #e67e22;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('images/bg.jpg') no-repeat center center/cover;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: white;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 20px;
+    background: #e67e22;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Menú */
+.menu, .nosotros, .contacto {
+    padding: 50px 20px;
+    background: white;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+/* Sobre Nosotros */
+.nosotros .contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.nosotros img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+/* Contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
