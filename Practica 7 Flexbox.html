@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+
+.container {
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.encabezado {
+    background-color: #f7a25c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.centro {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 20px;
+}
+
+
+.caja {
+    flex: 1; 
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-shadow: 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.pie {
+    background-color: #759e8d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .centro {
+        flex-direction: column;
+    }
+
+    .caja {
+        margin-bottom: 10px;
+    }
+}
+	</style>
+	<title>Flexbox en css</title>
+</head>
+<body>
+	 <div class="container">
+        <header class="encabezado">
+            <h1>Practica 7: Cajas pero son flexibles</h1>
+        </header>
+
+        <div class="centro">
+            <div class="caja">Caja 1</div>
+            <div class="caja">Caja 2</div>
+        </div>
+
+ 
+        <footer class="pie">
+            <p>Pie de página 2</p>
+        </footer>
+    </div>
+</body>
+</html>
