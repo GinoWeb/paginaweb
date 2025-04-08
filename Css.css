@@ -1,0 +1,50 @@
+body {
+  background-color: #131414;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+  color: #ffffff;
+}
+
+#mostrar {
+  display: none;
+}
+
+label[for="mostrar"] {
+  background-color: #4d4d4d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.imagen img {
+  width: 150px;
+  height: 100px;
+  border: 3px solid rgb(119, 24, 24);
+  border-radius: 10px;
+}
+
+label[for="mostrar"]:hover + .galeria,
+label[for="mostrar"]:hover ~ .galeria {
+  display: none;
+}
+
+label[for="mostrar"]:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
