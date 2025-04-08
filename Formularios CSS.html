@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #0277bd;
+        }
+        fieldset {
+            border: 2px solid #0288d1;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        legend {
+            font-weight: bold;
+            color: #01579b;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .input-group input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 8px;
+        }
+        .input-group img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        button {
+            flex: 1;
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0277bd;
+        }
+        .reset-button {
+            background-color: #d32f2f;
+        }
+        .reset-button:hover {
+            background-color: #b71c1c;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Compras Online</h1>
+        <form>
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label>Nombre: <input type="text" name="nombre" required></label>
+                <label>Apellidos: <input type="text" name="apellidos" required></label>
+                <label>Nombre de usuario: <input type="text" name="usuario" required></label>
+                <label>Contraseña: <input type="password" name="contrasena" required></label>
+                <label>Correo: <input type="email" name="correo" required></label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Dirección</legend>
+                <label>Calle: <input type="text" name="calle"></label>
+                <label>Número de casa: <input type="text" name="numero"></label>
+                <label>Colonia: <input type="text" name="colonia"></label>
+                <label>Código Postal: <input type="text" name="codigo_postal"></label>
+                <label>Sitio Web:</label>
+                <div class="input-group">
+                    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar">
+                    <input type="url" name="sitio_web">
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Preferencias de Compra</legend>
+                <label>Tipo de artículos adquiridos:
+                    <select name="articulos">
+                        <option value="ropa">Ropa</option>
+                        <option value="electronica">Electrónica</option>
+                        <option value="hogar">Hogar</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </label>
+                <label>Tallas:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="talla" value="S"> S</label>
+                    <label><input type="checkbox" name="talla" value="M"> M</label>
+                    <label><input type="checkbox" name="talla" value="L"> L</label>
+                    <label><input type="checkbox" name="talla" value="XL"> XL</label>
+                </div>
+                <label>Selecciona color:</label>
+                <input type="color" name="color">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Buzón de Sugerencias</legend>
+                <textarea name="sugerencias" rows="4"></textarea>
+            </fieldset>
+            
+            <div class="button-group">
+                <button type="submit">Enviar Datos</button>
+                <button type="reset" class="reset-button">Borrar Datos</button>
+            </div>
+        </form>
+    </div>
+    <footer>Distribuidor autorizado de productos de calidad ©</footer>
+</body>
+</html>
