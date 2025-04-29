@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con Javascript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.03);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #74ebd5;
+            box-shadow: 0 0 5px #74ebd5;
+        }
+
+        input[type="button"] {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: #74ebd5;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        input[type="button"]:hover {
+            background: #56c7c2;
+        }
+
+        #r {
+            font-size: 20px;
+            margin-top: 15px;
+            color: #444;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <script type="text/javascript" src="operaciones.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Operaciones</h1>
+        <form onsubmit="return false;">
+            <input type="text" id="num1" placeholder="Escribe un número"> <br>
+            <input type="text" id="num2" placeholder="Escribe otro número"> <br>
+            <input type="button" value="Suma" onclick="sumar()">
+            <input type="button" value="Resta" onclick="restar()">
+            <input type="button" value="Multiplica" onclick="multiplicar()">
+            <input type="button" value="Divide" onclick="dividir()">
+        </form>
+        <p id="r">El resultado aparecerá aquí</p>
+    </div>
+</body>
+</html>
