@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diagnóstico Porsche</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <h1>Formulario de Diagnóstico - Porsche</h1>
+
+  <form id="quizForm">
+    <div class="question">
+      <label>1. ¿Cuál es el modelo más vendido de Porsche?</label><br>
+      <input type="radio" name="q1" value="a"> 911<br>
+      <input type="radio" name="q1" value="b"> Cayenne<br>
+      <input type="radio" name="q1" value="c"> Panamera<br>
+    </div>
+
+    <div class="question">
+      <label>2. ¿Qué tipo de motor tiene el Porsche 911 clásico?</label><br>
+      <input type="radio" name="q2" value="a"> V8 frontal<br>
+      <input type="radio" name="q2" value="b"> Bóxer trasero<br>
+      <input type="radio" name="q2" value="c"> V6 central<br>
+    </div>
+
+    <div class="question">
+      <label>3. ¿En qué año fue fundado Porsche?</label><br>
+      <input type="radio" name="q3" value="a"> 1948<br>
+      <input type="radio" name="q3" value="b"> 1963<br>
+      <input type="radio" name="q3" value="c"> 1931<br>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="result"></div>
+  <canvas id="scoreChart"></canvas>
+  <button onclick="generatePDF()">Generar PDF</button>
+
+  <script src="script.js"></script>
+  <iframe id="pdfViewer" width="100%" height="500px" style="display:none; margin-top: 30px;"></iframe>
+
+</body>
+</html>
